@@ -58,7 +58,14 @@
 * type : input의 타입을 정함(text, password, submit...)
 * name : 서버에 전송될 때 각각의 데이터를 구분하기 위해 지정해야함
 	* http://localhost/login.php?`id=egoing&password=1111&addr=부산시+사하구`
-	
+* default : inputbox에 기본으로 적혀있음
+
 <hr>
+
+&lt;textarea&gt; tag는 여러줄의 입력을 받을수있다.
+
+* cols : 가로로 n글자가 입력받을 수 있을만큼 폭이 커짐.
+* rows : 세로로 n줄을 입력받을 수 있을만큼 폭이 커짐
+* 기본값은 value로 넣는게 아니라 textarea태그 사이에 컨탠트를 넣을 수 있다.
 
 
