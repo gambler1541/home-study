@@ -68,4 +68,15 @@
 * rows : 세로로 n줄을 입력받을 수 있을만큼 폭이 커짐
 * 기본값은 value로 넣는게 아니라 textarea태그 사이에 컨탠트를 넣을 수 있다.
 
+<hr>
+
+&lt;select&gt; tag를 사용하면 dropdownlist(combobox)형식의 선택지가 생긴다.
+
+* &lt;option&gt; tag로 각각의 항목을 만들수 있다.
+* `value`속성으로 사람이 보는 값과 서버로 전송하는 값을 다르게 보낼수있다.
+* multiple 이란 속성을 작성하면 여러개의 값을 선택할수 있게된다.
+	* 다중 선택시 `color=red & color=black`형식으로 서버에 전달된다.
+
+
+
 
