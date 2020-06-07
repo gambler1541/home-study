@@ -38,8 +38,8 @@
 
 * &lt;thead&gt;, &lt;tbody&gt;,&lt;tfoot&gt; 태그는 사용하지 않더라도 브라우저가 자동으로 만들어주지만 문서를 작성할 때 해주는게 좋다.
 
-* colsapn : 수직(행)으로 합침
-* rowsapn : 수평(열)으로 합침
+* rowsapn : 수직(행)으로 합침
+* colsapn : 수평(열)으로 합침
  
 
 
