@@ -77,6 +77,14 @@
 * multiple 이란 속성을 작성하면 여러개의 값을 선택할수 있게된다.
 	* 다중 선택시 `color=red & color=black`형식으로 서버에 전달된다.
 
+<hr>
 
+&lt;radiobutton&gt; tag는 여러개 중에 하나 혹은 복수개를 선택해서 서버에 전송할수 있다. 
+
+* 형식은 input tag의 type에 `raido`를 넣어줌
+* 하나의 버튼을 누르면 다른 버튼이 선택이 풀리게 하기위해서는 버튼을 `같은 name`으로 작성해주면됨
+* &lt;checkbox&gt; tag는 다중 선택을 위해사용
+
+<hr>
 
 
