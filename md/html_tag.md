@@ -94,4 +94,14 @@
 
 * input type을 hidden으로 지정하면 ui는 생성되지 않지만 설정된 value가 서버로 전송된다.
 
+<hr>
+
+&lt;label&gt; tag는 각 input tag의 이름을 붙일때 사용한다.
+
+* label에 for 속성을 주고 이름을 준 태그의 id값을 입력하면 label 의 content를 클릭해도 input box가 선택이 됨
+
+<hr>
+
+
+
 
