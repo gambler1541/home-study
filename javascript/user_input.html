@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>User Input</title>
+
+  </head>
+  <body>
+    <h3>사용자 입력</h3>
+    <hr size="3">
+    <div id="result">
+
+    <script>
+      var result = document.getElementById("result");
+
+      function promptEX(){
+        var ret = prompt("문자를 입력하세요.", "수선화");
+        if(result == null){
+          result.innerHTML= "문자를 입력하세요!!";
+        }
+        else{
+          result.innerHTML = "입력하신 문자는 : " + ret;
+        }
+      }
+
+      function confirmEX(){
+        var ret = confirm("보내시겠습니까?");
+        if (ret == true) {
+          result.innerHTML = "메세지를 보냈습니다.";
+        }
+        else {
+          alert("취소되었습니다.");
+          }
+      }
+
+    </script>
+
+    </div>
+    <hr size="3">
+    <button onclick="promptEX()">입력</button>
+    <button onclick="confirmEX()">보내기</button>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>do - while을 이용한 n번째 까지의 합계</title>
+  </head>
+  <body>
+    <h3>n번째 숫자까지의 합계</h3>
+    <hr>
+    <script>
+      var num = prompt("숫자를 입력하세요", 0);
+
+      var sum=0,i=0, odd=0, even=0;
+      do{
+        sum += i;
+        if(i % 2 == 0){
+          even += i;
+        }
+        else{
+          odd += i;
+        }
+        i++;
+      }
+      while(i<=num)
+      document.write("1부터" + num + "까지의 합은: " + sum + "<br>");
+      document.write("짝수의 합 : " + even + "<br>");
+      document.write("홀수의 합 : " + odd);
+    </script>
+  </body>
+</html>
