@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title> CSS exmple</title>
+    <style>
+      ul li{
+        color : red;
+      }
+      ol#first>li{
+        border : 1px solid red;
+        color : blue;
+      }
+      /* 각 태그를 ,(콤마)로 구분하면 대등한 입장에서 선택됨 */
+      ul, ol {
+        background-color: powderblue;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+    </ul>
+    <ol id="first">
+      <li>HTML</li>
+      <li>CSS
+        <ol>
+          <li>selector</li>
+          <li>declaration</li>
+        </ol>
+      </li>
+      <li>JavaSCript</li>
+    </ol>
+  </body>
+</html>
