@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>holy grail layout</title>
+    <style>
+      body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .container{
+        display : flex;
+        flex-direction : column;
+        width : 800px;
+        border : 1px solid gray;
+      }
+      header{
+        border-bottom : 1px solid gray;
+        padding-left : 20px;
+      }
+      footer {
+        border-top : 1px solid gray;
+        padding : 20px;
+        text-align : center;
+      }
+      .content{
+        display : flex;
+      }
+
+      .content nav{
+       border-right : 1px solid gray;
+      }
+
+
+      .content aside{
+        border-left : 1px solid gray;
+      }
+      @media(max-width:500px){
+      .content{
+        flex-direction: column;
+      }
+      .content nav{
+       border-right : none;
+      }
+      .content aside{
+        border-left : none;
+      }
+    }
+
+      nav,aside{
+        flex-basis : 150px;
+        flex-shrink : 0;
+      }
+      main{
+        padding : 10px;
+      }
+      nav{
+        order : -1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>레이아웃 연습</h1>
+      </header>
+      <section class="content">
+        <main>
+          deserunt perferendis consequatur incidunt, at explicabo minima dolore atque, facilis similique veniam rerum molestias laudantium numquam pariatur maxime voluptatibus, veritatis recusandae expedita. Quos eius atque consequatur veritatis vel velit, sequi numquam laudantium suscipit omnis illo rem nihil libero aperiam in sapiente laborum a quisquam vero molestias. Eveniet iure dolorum reiciendis quod minus. Minus, ipsa, enim. Amet, hic accusamus suscipit, est nisi minima temporibus illo quisquam eveniet sit ratione accusantium dolores doloribus deserunt reiciendis consequuntur asperiores aut iusto numquam sapiente rem ducimus. Perferendis illum ex alias labore vero eaque reiciendis necessitatibus rem minima ab assumenda magnam nulla ipsam, pariatur eum fugiat suscipit. Excepturi.</p>
+        </main>
+        <nav>
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>javascript</li>
+          </ul>
+        </nav>
+
+        <aside>
+          AD
+        </aside>
+      </section>
+      <footer>
+        <a href="https://github.com/gambler1541">github</a>
+      </footer>
+    </div>
+  </body>
+</html>
