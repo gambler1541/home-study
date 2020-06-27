@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Filter</title>
+    <style>
+      h1{
+        WebkitFilter: blur(3px);
+        filter:blur(3px);
+      }
+      img{
+        transition : all 3s;
+      }
+      img:hover{
+        WebkitFilter:grayscale(100%) blur(5px);
+        filter:grayscale(100%) blur(5px);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Cat</h1>
+    <img src="../img/cat.jpg" alt="">
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>텍스트 바꾸기</title>
+  </head>
+  <body>
+    <input type="button" value="open" onclick="winopen();">
+    <input type="text" onkeypress="winmessage(this.value)">
+    <input type="button" value="close" onclick="winclose()">
+      <script>
+      function winopen(){
+        win = window.open('test.html', 'ot');
+      }
+      function winclose(){
+        win.close();
+      }
+      function winmessage(msg){
+        win.document.getElementById('message').innerHTML = msg;
+      }
+    </script>
+  </body>
+</html>

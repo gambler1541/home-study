@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>캡쳐링과 버블링</title>
+    <style>
+      html{
+        border : 1px solid red;
+      }
+      body{
+        border : 1px solid green;
+        padding: 30px;
+      }
+      fieldset{
+        border : 1px solid blue;
+        padding : 30px;
+      }
+      input{
+        border : 1px solid black;
+        padding : 30px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <fieldset>
+      <input type="button" name="" value="버튼" id="target">
+    </fieldset>
+
+    <script>
+      function handler(event){
+        var phases = ['capturing', 'target', 'bubbling'];
+        console.log(event.target.nodeName,this.nodeName,phases[event.eventPhase-1]);
+      }
+      document.getElementById('target').addEventListener('click', handler, true);
+      document.querySelector('fieldset').addEventListener('click', handler, true);
+      // document.querySelector('body').addEventListener('click', handler, true);
+      // document.querySelector('html').addEventListener('click', handler, true);
+    </script>
+  </body>
+</html>

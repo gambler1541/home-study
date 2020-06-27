@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title> document object </title>
+  </head>
+  <body>
+    <ul>
+      <li>HTML</li>
+      <li>CSS/li>
+      <li>Javascript</li>
+    </ul>
+    <ol>
+      <li id="idtest">HTML2</li>
+      <li class="active">CSS2</li>
+      <li class="active">Java</li>
+    </ol>
+    <script>
+      var ul = document.getElementsByTagName('ul')[0];
+      var li = ul.getElementsByTagName('li');
+      for(var i = 0;i < li.length;i++ ){
+        li[i].style.color='red';
+      }
+
+      var active = document.getElementsByClassName('active');
+      for(var i = 0; i<active.length;i++){
+        active[i].style.color='blue';
+      }
+
+      var idtest = document.getElementById('idtest');
+      idtest.style.color = 'green';
+
+      var qli = document.querySelector('li'); // 모든 li 엘레먼트
+      var qli = document.querySelector('.active') // class = 'active' 인 엘리먼트
+    </script>
+  </body>
+</html>
