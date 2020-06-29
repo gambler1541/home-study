@@ -32,6 +32,6 @@
 
 &lt;jsp:useBean id="test" class="ClassName" scope="application" />
 
-&lt;jsp:getProperty name="name" property="name" />
+&lt;jsp:getProperty name="test" property="name" />
 
 = <%= test.getName() %>
