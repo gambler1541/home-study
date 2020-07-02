@@ -72,6 +72,14 @@ JDBC Driver는 JDBC 인터페이스에 맞추어 해당 DMBS에서 JDBC관련 AP
 		stmt.executeUpdate(sql);
 		```
 		
+	* 객체 Statement에서 SQL질의 문장을 실행하는 메서드
+	
+	|메서드 종류|반환 자료형|특징|
+	|---|---|---|
+	|executeQuery()|ResultSet|select와 같이 데이터베이스에 변경을 주지 않는 SQL 문장을 실행할때 사용하며 그 결과로 ResultSet 객체를 반환|
+	|executeUpdate()|int|insert, update, delete와 같이 데이터베이스의 구조또는 값을 변경시키는 질의<br> create,drop과 같은 DDL구문을 사용할때 사용<Br>질의 수행 후 영향을 받은 행의 수를 정수로 반환|
+	|execute()|boolean|실행할 SQL문이 어떠한 종류의 것인지를 모를 경우에 사용<br>결과가 ResultSet이면 `true` 결과가 행의 수 또는 없으면 `false`|
+		
 5. 질의 결과 ResultSet 처리
 	
 	```
