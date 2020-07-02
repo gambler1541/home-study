@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>collection</title>
+  </head>
+  <body>
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li id="js">Javascript</li>
+    </ul>
+    <script>
+      console.group('before');
+      var lis = document.getElementsByTagName('li');
+      for(var i = 0; i <lis.length; i++){
+        console.log(i);
+        console.log(lis[i]);
+      }
+      console.groupEnd();
+      console.log(lis.length);
+      console.log(document.getElementById('js').tagName);
+      var li = document.getElementById('js');
+      li.id = 'js2';
+      console.log(li.id);
+    </script>
+  </body>
+</html>
