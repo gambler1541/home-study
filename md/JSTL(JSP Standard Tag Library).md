@@ -39,3 +39,64 @@ JSTL은 여러 태그를 5가지 부류로 나누어  제공한다.
 |URL 관리|import<br>param<br><br>redirect<br>url|다른 페이지를 현재 위치, 또는 변수에 저장<br>태그&lt;import>&lt;redirect>&lt;url>의 서브 태그로 매개 변수 전송 처리<br>새로온 URL로 이동 처리<br>질의 매개 변수를 이용하여 URL 생성|
 |예외처리|catch|예외 처리|
 |출력|out|출력 처리|
+
+## Set 속성
+
+|속성|기본값|자료 유형|기능|
+|---|---|---|---|
+|var||String|값이 저장되는 변수름|
+|target||String|값이 저장되는 자바빈즈 객체 이거나 또는 MAP자바빈즈의 경우 setter인 property에 의해 값 지정|
+|value||String|변수 또는 객체에 저장할 값|
+|property||String|target 객체의 property 이름|
+|scope|page|String|변수가 효력을 발휘하는 영역으로 page,request,session,application 중 하나를 지정|
+
+## JSP 내장 객체의 영역
+
+JSP기반의 웹 애플리케이션은 page영역, request영역, session영역, application영역 네 가지로 나누어집니다. 각각의 영역에 관한 정보는 영역과 연결된 내장 객체를 이용하여 접근할 수 있습니다.
+
+|영역|내장객체|의미|
+|---|---|---|
+|page|pageContext|하나의 JSP 페이지 내에서 속하는 영역으로,<br>하나의 JSP페이지 안에서만 공유할 값을 저장합니다.|
+|request|request|한 번의 요청에 대한 정보가 저장되는 영역<br>웹 브라우저가 요청을 보낼 때마다 새로운 request영역이 되고 request객체를 이용하여 모든 JSP페이지에서 접근이 가능합니다.|
+|session|session|한 명의 사용자와 관련된 정보가 저장되는 영역입니다.<br>사용자가 이용하는 웹 브라우저 하나 당 영역이 존재하기 때문에 주로 로그인 정보를 저장합니다.|
+|application|application|모든 사용자가 이용할 수 있는 정보를 저장하는 영역입니다. 하나의 웹 어플레킹션에 대한 요청, 세션 등과 같은 모든 정보는 application 영역에 속합니다. 주로 웹 어플리케이션의 설정 정보를 저장합니다.|
+
+## &lt;c:choose> 태그
+
+&lt;c:choose>태그는 조건에 따른 여러곳으로 분기 가능하고, 조건이 맞은 것이 없을 경우 기본 분기를 제공할 수 있습니다.
+
+```
+<c:choose>
+	<c:when test="${name eq '김철수'}"> ... </c:when>
+	<c:when test="${name eq '김영희'}"> ... </ㅊ:when>
+	<c:otherwise> ... </c:otherwise>
+</c:choose>
+```
+
+위 코드는 이름이 '김철수', '김영희'일 경우 분기 하고 그 외의 경우에는 &lt;c:otherwise>로 분기합니다.
+
+
+## 논리 연산자
+
+* and(&&) : 모두 참일때 참이 됩니다.
+	
+	* &lt;c:if test="${a > b and c < d}">
+	* &lt;c:if test="${a > b && c < d}">
+
+* or(||) : 둘중 하나라도 참이면 참이 됩니다.
+
+	* &lt;if test="${a > b or c < d}">
+	* &lt;if test="${a > b || c < d}">
+
+* not(!) : 논리를 반전합니다.
+	
+	* &lt;if test="${not a == ''}">
+	* &lt;if test="${!a == ''}">
+
+* ne(!=) : 문자열 또는 숫자가 다르면 참입니다.
+	
+	* &lt;if test="${name != '홍길동'}">
+	* &lt;if test="${name ne '홍길동'}">
+
+	* &lt;if test="${num != 5}">
+	* &lt;if test="${num ne 5}">
